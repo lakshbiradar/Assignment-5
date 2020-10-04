@@ -1,0 +1,66 @@
+/* Footer with math query */
+
+footer  
+{
+@include dimension (100%, 120px);
+@include footer ($dark-grey, center, $base-color, 50px);
+@include break ($small)
+{
+    text-align:center;
+}
+p {
+    @include break ($small)
+    {
+        float:none;margin:0;
+    }
+}
+ img 
+ {
+    @include break ($small)
+    {
+        float:none;margin:0;
+    }  
+ }
+}
+
+.social-media
+{
+    margin:0 auto;
+    @include dimension(165px, auto);
+    
+
+    div
+    {
+        float:left;
+        margin-right:5px;
+    }
+    a
+    {
+        @include dimension(36px, 36px);
+        display:block;
+        text-indent:-9999px;
+    }
+
+/* Math Querry */
+   div.one
+   {
+    background: $S-media (0*38) 0;
+   }
+   div.two
+   {
+
+    background: $S-media (-1*38px) 0;
+   }
+   div.three
+   {
+
+    background: $S-media  (-2*38px) 0;
+
+   }
+   div.four
+   {
+
+    background: $S-media (-3*38px)  0;
+   }
+
+}

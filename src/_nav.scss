@@ -1,0 +1,74 @@
+/* Nav and Figure */
+
+figure                  
+{
+@include dimension(400px, 190px);
+@include logo ($bg-fig);
+@include break ($large)
+{
+    width:inherit;height:140px;float:none;background-position:center;
+}
+@include break ($small)
+{
+    background-size:contain;height:100px;   
+}
+}
+
+nav 
+{
+    @include dimension (540px, 190px);
+    float:left;
+    text-align:right;
+    @include break ($large)
+    {
+        width:inherit;height:50px;float:none;text-align:center;
+    }
+    @include break ($small)
+    {
+        margin-bottom:40px !important;
+    }
+ul 
+{
+    list-style-type:none;
+    margin-top:95px;
+    @include break ($large)
+    {
+        margin-top:0;
+    }
+    li 
+    {display:inline;
+    font-size:0.8em;
+    margin-right:10px;
+     @include break ($medium)
+     {
+        font-size:0.8em;margin:0 5px;
+     }
+     @include break ($large)
+     {
+        font-size:1em;margin:0 10px;
+     }
+        a{
+            color: $red;
+            text-decoration:none;
+            letter-spacing:-0.01em;
+            &:hover           
+            {color: $base-color;}
+        }
+    }
+}
+}
+
+
+
+.greybar                    
+{
+@include dimension (100%, 90px);
+background: $base-light;
+clear:both;
+padding-top:30px;
+@include break ($small)
+{
+    display:none;   
+}
+}
+

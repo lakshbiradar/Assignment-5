@@ -1,0 +1,67 @@
+/* Header */
+header 
+{
+width:inherit;
+clear:both;
+text-align:center;
+padding-top:40px;
+
+img {
+    @include dimension(100%, auto);
+    @include break ($medium)
+    {
+        margin-bottom:100px;
+    }
+    @include break ($small)
+    {
+        margin-bottom:80px;
+    }
+}
+h1 { @include header($red, 100, 4em, 0);
+
+     @include break ($large)
+     {
+        font-size:3em;
+     }
+     @include break ($medium)
+     {
+        font-size:2em;   
+     }
+     &:first-child
+     {
+         @include break ($small)
+         {
+            font-size:1.4em;margin-bottom:20px; 
+         }
+     }
+
+}
+h2 {@include header($base-color, 900, 2.5em,0); margin-bottom:70px;
+ 
+    @include break ($large)
+    {
+        font-size:1.5em;
+    }
+    @include break ($medium)
+    {
+        font-size:1em;
+    }
+    @include break ($small)
+    {
+        font-size:1.4em;
+    }
+
+}
+h3 {@include header($light-grey, 400, 2em, 0); margin-bottom:50px;
+
+@include break ($medium)
+{
+    font-size:1.5em;
+}
+@include break ($small)
+{
+    color: $base-color;font-size:1em;
+}
+}
+
+}
